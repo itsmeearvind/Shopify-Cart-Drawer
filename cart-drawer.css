@@ -1,1 +1,57 @@
+/* Cart Drawer CSS */
+.cart__drawer.right-to-left-open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 28%;
+    height: 100%;
+    z-index: 99;
+    background: #ccc;
+  	display: none;
+  	
+}
+.cart__drawer-section {
+    height: 100%;
+}
+span.cross {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 4px;
+}
+.item-qty {
+    width: 90px;
+    height: 28px;
+  	text-align: center;
+}
+.show-cart__drawer{
+  display: block;
+  
 
+}
+.cart__drawer-top {
+    border-bottom: 2px solid;
+    padding: 30px;
+}
+.cart__drawer-center {
+    height: 65%;
+    
+}
+.cart_items {
+    padding-top: 20px;
+    height: 150px;
+    border-bottom: 1px solid;
+}
+.remove__item {
+    position: relative;
+    top: 22px;
+    left: 110px;
+}
+.cart__drawer-bottom {
+    display: flex;
+    justify-content: space-between;
+  	height: 20%;
+}
