@@ -1,106 +1,115 @@
 /* Cart Drawer CSS */
 .cart__drawer {
-display: block;
-position: fixed;
-top: 0;
-bottom: 0;
-z-index: 999999;
-background: #fff;
--webkit-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
--moz-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
--ms-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
--o-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
-max-width: 100%;
-padding: 0 0px 30px;
-overflow: auto;
-right:-100%;
-width:400px;
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index: 999999;
+      background: #fff;
+      -webkit-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+      -moz-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+      -ms-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+      -o-transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+      transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+      max-width: 100%;
+      padding: 0 0px 30px;
+      overflow: auto;
+      right:-100%;
+      width:400px;
+}
 
-}
 .cv--show-cart__drawer:before{
-position: fixed;
-content: "";
-background: rgba(0, 0, 0, 0.8);
-height: 100%;
-width: 100%;
-z-index: 9999;
-left: 0;
-right: 0;
-bottom: 0;
-top: 0;
+      position: fixed;
+      content: "";
+      background: rgba(0, 0, 0, 0.8);
+      height: 100%;
+      width: 100%;
+      z-index: 9999;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
 }
+
+
 .cart__drawer.show-cart__drawer {
--webkit-transform: translateX(-400px);
--moz-transform: translateX(-400px);
--ms-transform: translateX(-400px);
--o-transform: translateX(-400px);
-transform: translateX(-400px);
-right: -400px;
+      -webkit-transform: translateX(-400px);
+      -moz-transform: translateX(-400px);
+      -ms-transform: translateX(-400px);
+      -o-transform: translateX(-400px);
+      transform: translateX(-400px);
+      right: -400px;
 }
+
 .cart__drawer-section {
-height: 100%;
-overflow: auto;
-background:white;
+      height: 100%;
+      overflow: auto;
+      background:white;
 }
+
 span.cross {
-font-size: 18px;
-cursor:pointer;
+      font-size: 18px;
+      cursor:pointer;
 }
+
 .item-qty {
-width: 35px;
-height: 28px;
-text-align: center;
-background: none;
-border: none;
-padding: 0;
+      width: 35px;
+      height: 28px;
+      text-align: center;
+      background: none;
+      border: none;
+      padding: 0;
 }
+
 .minus {
-height: 22px;
-width: 22px;
-line-height: 18px;
-padding-right: 13px;
-background: none;
-border: 1px solid #000;
-padding-top: 2px;
-border-radius:3px;
+      height: 22px;
+      width: 22px;
+      line-height: 18px;
+      padding-right: 13px;
+      background: none;
+      border: 1px solid #000;
+      padding-top: 2px;
+      border-radius:3px;
 }
+
 a.cart__remove {
-color: #c73948;
-padding: 0;
-border: none;
-font-size: 10px;
-display: inline-block;
-text-align: left;
-text-transform: uppercase;
+      color: #c73948;
+      padding: 0;
+      border: none;
+      font-size: 10px;
+      display: inline-block;
+      text-align: left;
+      text-transform: uppercase;
 }
+
 button.cdrawer-chekout-btn {
-width: 100%;
-font-weight: bold;
-font-size: 15px;
-cursor: pointer;
-border-radius: 0px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-transform: uppercase;
-padding: 12px 20px;
-background: #67baa0;
-border: 1px solid #67baa0;
-color: white;
+      width: 100%;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      background: #67baa0;
+      border: 1px solid #67baa0;
+      color: white;
 }
+
 .plus{
-height: 22px;
-width: 22px;
-line-height: 18px;
-padding-left:5px;
-background: none;
-border: 1px solid #000;
-border-radius:3px;
+      height: 22px;
+      width: 22px;
+      line-height: 18px;
+      padding-left:5px;
+      background: none;
+      border: 1px solid #000;
+      border-radius:3px;
 }
 .show-cart__drawer{
-display: block;
+      display: block;
 }
 .cart__drawer-top {
-border-bottom: 1px solid #f7f8f9;
+      border-bottom: 1px solid #f7f8f9;
 }
