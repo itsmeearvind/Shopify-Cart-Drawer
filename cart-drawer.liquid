@@ -1,14 +1,20 @@
-<div class="cart__drawer right-to-left-open">
+<div  class="cart__drawer right-to-left-open">
   <div class="cart__drawer-section">
     <div class="cart__drawer-top">
       <div class="cart__drawer-heading">
         <div class="heading-text text-center">
-          <h2 class="top-text">{{ 'cart.general.title' | t }}</h2>
           <span class="cross">X</span>
+          <h2 class="top-text">{{ 'cart.general.title' | t }}</h2>
+          {% include 'icon-cart' %}
+        </div>
+        <div class="cv--shipping">
+          <span class="cv--free-shipping">Envío Express Gratis</span>
         </div>
       </div>
     </div>
     <div class="cart__drawer-center">
+    
+      {% if cart.item_count >= 1 %}
       <form action="/cart" method="post" enctype="multipart/form-data" class="cart__drawer-form">
         <div class="cart__drawer-item grid--uniform">
           {% for item in cart.items %}
@@ -20,6 +26,7 @@
                 </a>
               </div>
             </div>
+            
             <div class="cart__items grid__item medium-up--one-third">
               <div class="cart_items-title">
                 <a href="{{ item.url }}">
@@ -28,28 +35,36 @@
                   </p>
                 </a>
               </div>
+              <div class="cart__item-price">
+                <strong>{{ item.final_line_price | money }}</strong>
+              </div>
+              <div class="remove__item">
+                <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove">QUITAR</a>
+              </div>
+            </div>
+            <div class="cart__items grid__item medium-up--one-third">
               <div class="qtySelector">
                 <button type="button" id="m-btn" class="minus" value="-">-</button>
                 <input type="text" name="updates[]" id="updates_{{ forloop.index }}" class="item-qty" pattern="[0-9]*" min="0" value="{{ item.quantity }}">
                 <button type="button" id="p-btn" class="plus" value="+">+</button>
               </div>
             </div>
-            <div class="cart__items grid__item medium-up--one-third">
-              <div class="remove__item">
-                <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove">x</a>
-              </div>
-              <div class="cart__item-price">
-                <strong>{{ item.final_line_price | money }}</strong>
-              </div>
-            </div>
           </div>
           {% endfor %}
         </div>
+
+        <div class="cart__drawer-bottom">
+          <span class="subtotal_text">{{ 'cart.general.subtotal' | t }}</span>
+          <span class="subtotal_price">{{ cart.total_price | money }}</span>
+        </div>
+        <div class="cart-drawer-checkout-button">
+          <button type="submit" class="cdrawer-chekout-btn">
+            <span class="cart-chk-btn">{{ 'cart.general.checkout' | t }}</span>
+          </button>
+        </div>
       </form>
+      {% endif %}
     </div>
-    <div class="cart__drawer-bottom">
-      <span class="subtotal_text">{{ 'cart.general.subtotal' | t }}</span>
-      <span class="subtotal_price">{{ cart.total_price | money }}</span>
-    </div>
+
   </div>
 </div>
