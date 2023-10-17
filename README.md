@@ -15,3 +15,7 @@ Step 4: Now open "Assets file" and paste your CSS and JS code in "theme.css" and
 Step 5: Now Paste this code {% include 'cart-drawer' %} in "theme.liquid" and Save the file. See Screenshot! ![step 5](https://user-images.githubusercontent.com/64454714/109426702-f7c8d200-7a14-11eb-88c8-1d6f27174445.png)
 
 Final Step: Now Checkout your store. You have successfully add the cart drawer to your Store. 
+
+
+To support me
+<a href="https://www.buymeacoffee.com/thearvind" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
